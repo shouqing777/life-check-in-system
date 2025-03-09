@@ -23,6 +23,14 @@ jwt:
       allow-credentials: true
       max-age: 3600
 
+logging:
+  file:
+    name: ./logs/application.log
+  level:
+    root: INFO
+    com.lifecheckin.backend: DEBUG
+    org.springframework.security: DEBUG
+
 ## 開發環境配置
 #server:
 #  port: 8080
