@@ -19,6 +19,15 @@ spring:
 jwt:
   secret: mySecretKey
 
+  mvc:
+    cors:
+      allowed-origins: "http://localhost:3000"
+      allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+      allowed-headers: "*"
+      allow-credentials: true
+      max-age: 3600
+
 #logging:
 #  level:
 #    root: DEBUG
+
