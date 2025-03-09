@@ -1,0 +1,40 @@
+### 1. 註冊新用戶
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "email": "testuser2@example.com",
+  "password": "securepassword"
+}
+
+### 2. 用戶登入並獲取令牌
+# @name login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "password": "securepassword"
+}
+
+> {%
+    client.global.set("authToken", response.body.token);
+%}
+
+### 4. 創建打卡記錄
+POST {{baseUrl}}/api/checkins
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+  "checkinTime": "2025-03-09T12:00:00Z"
+}
+
+### 5. 檢查今日是否已打卡
+GET {{baseUrl}}/api/checkins/today
+Authorization: Bearer {{authToken}}
+
+### 6. 獲取用戶的所有打卡記錄
+GET {{baseUrl}}/api/checkins/my
+Authorization: Bearer {{authToken}}

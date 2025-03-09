@@ -18,16 +18,20 @@ spring:
 
 jwt:
   secret: mySecretKey
+  expiration: 86400000 # 1天
 
-  mvc:
-    cors:
-      allowed-origins: "http://localhost:3000"
-      allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
-      allowed-headers: "*"
-      allow-credentials: true
-      max-age: 3600
+logging:
+  level:
+    root: INFO
+    com.lifecheckin.backend: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
 
-#logging:
-#  level:
-#    root: DEBUG
-
+# MVC配置
+spring.mvc:
+  cors:
+    allowed-origins: "http://localhost:3000"
+    allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+    allowed-headers: "*"
+    allow-credentials: true
+    max-age: 3600

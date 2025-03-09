@@ -19,10 +19,14 @@ public class LifeCheckinBackendApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-//		User user = new User();
-//		user.setUsername("testuser");
-//		user.setPassword("password");
-//		userService.createUser(user);
-	}
+		// 建立測試用戶 (取消註釋這段代碼)
+		User user = new User();
+		user.setUsername("testuser2");
+		user.setPassword("securepassword");
+		user.setEmail("testuser2@example.com");
+		userService.createUser(user);
 
+		System.out.println("測試用戶已創建: admin / admin123");
+
+	}
 }
