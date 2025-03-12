@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://ep-long-wind-a8fxsjx3-pooler.eastus2.azure.neon.tech:5432/neondb
+    url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
