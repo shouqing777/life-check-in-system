@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: ${DB_URL} # 例如: jdbc:postgresql://localhost:5432/mydb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+jwt:
+  secret: ${JWT_SECRET} # 需要一個強密鑰

@@ -31,3 +31,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# 本地配置文件
+**/application-local.yml
+**/application-local.properties
+**/application-dev.yml
+**/application-dev.properties
+
+# 其他通常應該忽略的檔案
+.env
+*.log
+*.key

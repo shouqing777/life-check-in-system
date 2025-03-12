@@ -1,13 +1,11 @@
 server:
   port: 8080
-
 spring:
   datasource:
     url: jdbc:postgresql://ep-long-wind-a8fxsjx3-pooler.eastus2.azure.neon.tech:5432/neondb
-    username: neondb_owner
-    password: npg_q1RzUawKj2AB
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -15,18 +13,15 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
 jwt:
-  secret: mySecretKey
+  secret: ${JWT_SECRET}
   expiration: 86400000 # 1天
-
 logging:
   level:
     root: INFO
     com.lifecheckin.backend: DEBUG
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
-
 # MVC配置
 spring.mvc:
   cors:
