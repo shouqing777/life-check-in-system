@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import store from "@/redux/store";
+import store from "@/redux/store/store";
 import Navbar from "@/components/ui/Navbar";
 
 // 創建一個 React Query 客戶端實例
